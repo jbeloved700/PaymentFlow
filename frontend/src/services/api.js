@@ -115,6 +115,8 @@ export const getPaymentSummary = ({ signal } = {}) => api.get("/payments/summary
 export const getPaymentInstructions = (studentId, { signal } = {}) => api.get(`/payments/instructions/${studentId}`, { signal });
 export const getStudentPayments = (studentId, { signal } = {}) => api.get(`/payments/${studentId}`, { signal });
 export const getStudentBalance  = (studentId, { signal } = {}) => api.get(`/payments/balance/${studentId}`, { signal });
+export const submitPayment = (data) => api.post("/payments", data);
+export const createPayment = submitPayment;
 export const verifyPayment = (txHash, idempotencyKey) =>
   api.post(
     "/payments/verify",

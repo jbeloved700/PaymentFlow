@@ -6,6 +6,7 @@ const { requireAdminAuth, requireSchoolAuth } = require('../middleware/auth');
 const {
   getPaymentInstructions,
   createPaymentIntent,
+  createDirectPayment,
   verifyPayment,
   submitTransaction,
   verifyTransactionHash,
@@ -184,6 +185,8 @@ router.post(
 
 // All remaining routes require school context
 router.use(resolveSchool);
+
+router.post("/", contractPaused, createDirectPayment);
 
 // Payment read endpoints now require authentication (Issue #1040)
 router.get("/", requireSchoolAuth(), validatePagination, getAllPayments);
