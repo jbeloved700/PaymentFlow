@@ -12,6 +12,7 @@ const es = {
     payFees: "Pagar cuotas",
     dashboard: "Panel",
     reports: "Informes",
+    analytics: "Analítica",
     fees: "Cuotas",
     feeRules: "Reglas de cuotas",
     auditLogs: "Registros de auditoría",

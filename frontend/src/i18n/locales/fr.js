@@ -10,6 +10,7 @@ const fr = {
     payFees: "Payer les frais",
     dashboard: "Tableau de bord",
     reports: "Rapports",
+    analytics: "Analytique",
     fees: "Frais",
     feeRules: "Règles de frais",
     auditLogs: "Journaux d'audit",
