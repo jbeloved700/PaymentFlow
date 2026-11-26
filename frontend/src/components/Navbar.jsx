@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from "react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -508,14 +507,11 @@ export default function Navbar() {
               <NavLink
                 key={href}
                 href={href}
-                role="listitem"
-                className={`nav-link${pathname === href ? " active" : ""}`}
-                aria-current={pathname === href ? "page" : undefined}
-                onMouseEnter={href === "/dashboard" ? prefetchDashboardData : undefined}
-                onFocus={href === "/dashboard" ? prefetchDashboardData : undefined}
-              >
-                {t(i18nKey)}
-              </Link>
+                label={t(i18nKey)}
+                active={pathname === href}
+                locked={locked}
+                lockedTooltip={lockedTooltip}
+              />
             ))}
           </div>
 
