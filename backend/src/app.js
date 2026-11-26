@@ -190,6 +190,7 @@ app.use('/api/fees', feeRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/reminders', reminderRoutes);
 app.use('/api/disputes', disputeRoutes);
+app.use('/api/sse', require('./routes/sse'));
 app.use('/api/source-rules', sourceValidationRuleRoutes);
 app.use('/api/receipts', receiptsRoutes);
 app.use('/api/fee-adjustments', feeAdjustmentRoutes);
